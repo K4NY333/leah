@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Signup</title>
+	<link rel="stylesheet" href="../users/signup.css">
+</head>
+<body>
+<script src="../users/signup.js"></script>
+<div class="wrap">
+<h2>Register</h2>
+
+<form id="registrationForm" action="signup.php" method="post" onsubmit="return validateForm()">
+	<input class="" type="text" name="name" value="" placeholder="Name" required>
+			<input class="" type="number" name="mobile" value="" placeholder="Mobile Number" required>
+			<input class="" type="email" name="email" value="" placeholder="Email" required>
+			<textarea class="" name="address" placeholder="Address" required></textarea>
+			<input class="" type="password" name="password" value="" placeholder="Password" required>
+			<input class="" type="password" name="cpassword" value="" placeholder="Confirm Password" required>
+			<input type="submit" name="submit" value="Register" class="">
+			<h6 class="pt-3">Aleready Have an Acccount? <a href="../users/signin.html">Login</a></h6>
+		</form>
+	</div>
+</body>

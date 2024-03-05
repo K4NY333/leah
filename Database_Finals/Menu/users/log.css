@@ -1,0 +1,32 @@
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+.close{
+    position: absolute;
+    width: 6%;
+    top: 2%;
+    left: 92%;
+    cursor: pointer;
+}
+.iframe-content{
+    position: absolute;
+    top: 12%;
+    left: 34%;
+    width: 40%;
+    height: 100%;
+}
+.signupframe{
+    top: 60%;
+    height: 80%;
+    width: 90%;
+    border: none;
+}
+.close{
+    position: absolute;
+    color: aliceblue;
+    size: 20px;
+    left: 70%;
+}

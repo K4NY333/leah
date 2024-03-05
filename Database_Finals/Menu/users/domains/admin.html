@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body{
+            background-color: #EAD196;
+        }
+        .top{
+            background-color: #7D0A0A;
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            top: -1%;
+            left: 0%;
+        }
+        .userlog{
+            width: 3.5%;
+            position: absolute;
+            left: 90%;
+            top: 15%;
+            transition: transform 0.3s ease; 
+            cursor: pointer;
+        } 
+        .userlog:hover {
+        transform: scale(1.1); /
+        }
+        .leftbox {
+            background-color: #7D0A0A;
+            position: absolute;
+            width: 22%;
+            height: 382%;
+            top: 123%;
+            left: 7%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .additem {
+            width: 33%;
+            position: absolute;
+            top: 12%;
+            left: 11%;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .additem:hover {
+        transform: scale(1.1); /
+        }
+        .modal3 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .modal-content3 {
+            color: #BF3131;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -60%);
+            background-color: #F3EDC8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        } 
+        .panel {
+            display: none;
+            position: fixed;
+            top: 14%;
+            left: 88%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<script src="../../users/domains/userin.js"></script>
+    <div class="top">
+        <img class="userlog" src="../../../images/user.png" alt="" onclick="openUserPanel()">
+    <div id="userPanel" class="panel">
+        <span class="close" onclick="closeUserPanel()">&times;</span>
+        
+    <div id="userInfo"></div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+
+    <div class="leftbox">
+        <img class="additem" src="../../../images/additem.png" alt=""  onclick="openModal3()">
+    </div>
+
+    </div>
+
+<script src="../domains/admin.js"></script> 
+
+    <div id="myModal3" class="modal3">
+    <div class="modal-content3">
+        <span class="close" onclick="closeModal3()">&times;</span>
+    <div id="modalContent3">
+    <div id="add-item-form">
+        <h2>Add New Item</h2>
+            <form action="additem.php" method="post" enctype="multipart/form-data">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+              
+            <label for="itemPrice">Item Price:</label>
+            <input type="number" id="itemPrice" name="itemPrice" required>
+              
+            <label for="itemCategory">Item Category:</label>
+        <select id="itemCategory" name="itemCategory">
+            <option value="Solo">Solo</option>
+            <option value="Meal">Meal</option>
+            <option value="Combo">Combo</option>
+            <option value="Drink">Drink</option>
+        </select>
+              
+            <!-- <label for="itemImage">Item Image:</label>
+            <input type="file" id="itemImage" name="itemImage" accept="image/*" required> -->
+              
+            <button type="submit">Add Item</button>
+            </form>
+    </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

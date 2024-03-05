@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inuling Barbeque House</title>
+
+    <link rel="stylesheet" href="css&js for menu/main.css">
+    <link rel="stylesheet" href="css&js for menu/home.css">
+    <link rel="stylesheet" href="css&js for menu/menu.css">
+    <link rel="stylesheet" href="css&js for menu/about.css">
+    <link rel="stylesheet" href="css&js for menu/contact.css">
+    <link rel="stylesheet" href="css&js for menu/ordernow.css">
+
+    <link rel="stylesheet" href="../Menu/users/log.css">
+
+</head>
+<body>
+
+<script src="../Menu/users/log.js"></script>
+    <header>
+        <img src="../images/log-in.png" class="loginlogo" onclick="openModal()">
+    </header>
+    <div id="myModal" class="modal" >
+        <div class="iframe-content" id="iframeContent">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe class="signupframe" src="../Menu/users/signup.html"></iframe>
+        </div>
+    </div>
+    
+    <script src="../Menu/css&js for menu/menu navigation.js"></script>
+    <nav>
+        <a href="#" onclick="scrollToSection('Home')">Home</a>
+        <a href="#" onclick="scrollToSection('Menu')">Menu</a>
+        <a href="#" onclick="scrollToSection('About')">About Us</a>
+        <a href="#" onclick="scrollToSection('Contact')">Contact</a>
+    </nav>
+
+    <section class="Home" id="Home">
+        <img src="../images/Background.png" class="bg" alt="">
+        <img src="../images/logo.png" class="logo" alt="">
+        <div class="slogan">
+            <h1>GRILL & CHILL</h1>
+            <p>Where Flavor Meets Fire!!!</p>
+            <a href="#" onclick="openCustomModal();" class="ordernow">Order Now</a>
+        </div>
+    </section>
+
+<script src="../Menu/css&js for menu/ordernow.js"></script>
+
+    <div id="customModal" class="custom-modal">
+        <span class="custom-close" onclick="closeCustomModal()"><img src="../images/fork.png" alt=""></span>
+        <iframe id="modalIframe" src="../Menu/Order/menu.php"></iframe>
+    </div>
+        
+    <section class="Menu" id="Menu">
+        <img src="../images/menubg.png" alt="" class="menubg">
+        <div class="cover1"></div>
+        <img src="../images/menu1.png" alt="" class="m1">
+        <img src="../images/menu2.png" alt="" class="m2">
+    </section>
+
+<script src="../Menu/css&js for menu/about.js"></script>
+    <section class="About" id="About">
+        <img src="../images/menubg.png" alt="" class="aboutbg">
+    <div class="cover2"></div>
+    <div class="photocontainer"></div>
+    <div class="images">
+        <img src="../images/abp9.png" alt="" class="m11">
+        <img src="../images/owner.png" alt="" class="m12">
+        <img src="../images/abp1.png" alt="" class="m22">
+        <img src="../images/abp2.png" alt="" class="m3">
+        <img src="../images/abp3.png" alt="" class="m4">
+        <img src="../images/abp4.png" alt="" class="m5">
+        <img src="../images/abp5.png" alt="" class="m6">
+        <img src="../images/abp6.png" alt="" class="m7">
+        <img src="../images/abp7.png" alt="" class="m8">
+        <img src="../images/abp8.png" alt="" class="m9">
+    </div>
+    </section>
+       
+    <section class="Contact" id="Contact">
+
+        <img src="../images/menubg.png" alt="" class="contactbg">
+        <div class="cover3"></div>
+        <img src="../images/frommap.png" alt="" class="map"> 
+        <img src="../images/placeholder.png" alt="" class="locationlogo">  <p class="locationtxt">Naational Highway, Lumban, Laguna (Beside LSIM School)</p>
+        <img src="../images/iphone.png" alt="" class="phonelogo">   <p class="phoneno">936-502-0307</p>
+        <img src="../images/time.png" alt="" class="timelogo">  <p class="timeopen">10:00 AM to 08:00 PM </p>
+
+    <div class="container2">
+        <h2>Click to Redirect</h2>
+            <a href="https://www.facebook.com/inulingbbq" target="_blank">
+                <img src="../images/facebook-circular-logo.png" alt="">
+            </a>
+    </div>
+
+        <div class="FeedBack">
+            <div class="feedback_form">
+                <input type="text" id="one" placeholder="">
+                <label class="feedback_label" id="oneo">Name</label>
+            </div>
+
+            <div class="feedback_form">
+                <input type="email" id="two" placeholder="">
+                <label class="feedback_label" id="twoo">E-mail</label>
+            </div>
+
+            <div class="feedback_form">
+                <input type="text" id="three" placeholder="">
+                <label class="feedback_label" id="threee">Feedback</label>
+            </div>
+
+            <button class="send">SEND</button>
+
+        </div>
+    </section>
+</body>
+</html>
